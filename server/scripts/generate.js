@@ -6,7 +6,7 @@ const privateKey = secp.secp256k1.utils.randomPrivateKey();
 const publicKey = secp.secp256k1.getPublicKey(privateKey);
 
 const hashMessage = (message) => {
-  message = "Matt Lewis";
+  message = privateKey.toString();
   const messageBytes = utf8ToBytes(message);
   const hash = toHex(keccak256(messageBytes));
   return hash;
