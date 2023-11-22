@@ -6,6 +6,8 @@ function Transfer({ address, setBalance }) {
   const [recipient, setRecipient] = useState("");
 
   const setValue = (setter) => (evt) => setter(evt.target.value);
+  // Needs to check to make sure you have enough funds
+  // Sign the transaction with the public key
 
   async function transfer(evt) {
     evt.preventDefault();
